@@ -2,11 +2,16 @@
 #include <stdlib.h>
 
 int main()
-{
-    float a;
-    printf("Enter a number:");
-    scanf("%f",&a);
-   printf("double is:%.2f\n",a*2);
-   printf("half is:%.2f\n",a/2);
+{int total_seconds;
+int hours,minutes,seconds;
+int remaining_seconds;
+    printf("enter time in seconds:");
+    scanf("%d",&total_seconds);
+    hours=total_seconds/3600;
+    remaining_seconds=total_seconds%3600;
+    minutes=remaining_seconds/60;
+    seconds=remaining_seconds%60;
+    printf("%d seconds = %d hours,%d minutes,and %d seconds\n",total_seconds,hours,minutes,seconds);
+
     return 0;
 }
